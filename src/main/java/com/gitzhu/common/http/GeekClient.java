@@ -63,4 +63,8 @@ public class GeekClient {
         HttpPost httpPost = new HttpPost(url);
         return getClient().execute(httpPost, handler);
     }
+
+    public void close() throws IOException {
+        getClient().close();
+    }
 }

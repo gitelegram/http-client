@@ -167,4 +167,12 @@ public class GeekAsyncClient {
         return privatePost(url, option, null);
     }
 
+    public void close(){
+        getClient().close();
+    }
+
+    public void closeAsynchronously(){
+        getClient().closeAsynchronously();
+    }
+
 }
