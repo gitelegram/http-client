@@ -13,14 +13,12 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 
 import java.io.IOException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 /**
  * @author michael
  * qiuxu.zhu@gmail.com
  */
-public class GeekClient {
+public class SimpleClient {
 
     private final HttpClientBuilder builder = HttpClientBuilder.create();
 
@@ -31,7 +29,7 @@ public class GeekClient {
         }
     });
 
-    public GeekClient(){
+    public SimpleClient(){
         setConnectionPool();
     }
 

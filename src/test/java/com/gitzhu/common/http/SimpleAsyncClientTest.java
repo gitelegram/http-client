@@ -15,15 +15,15 @@ import java.util.concurrent.ExecutionException;
  * @author michael
  * qiuxu.zhu@gmail.com
  */
-public class GeekAsyncClientTest {
+public class SimpleAsyncClientTest {
 
-    private GeekAsyncClient geekAsyncClient;
+    private SimpleAsyncClient simpleAsyncClient;
     private String url;
     private HttpOption option;
 
     @Before
     public void init(){
-        geekAsyncClient = new GeekAsyncClient();
+        simpleAsyncClient = new SimpleAsyncClient();
         url = "http://www.10010.com";
         option = new HttpOption();
     }
@@ -31,7 +31,7 @@ public class GeekAsyncClientTest {
 
     @Test
     public void testGet() throws ExecutionException, InterruptedException {
-        ListenableFuture<String> future = geekAsyncClient.get(url, option, new AsyncHandler<String>() {
+        ListenableFuture<String> future = simpleAsyncClient.get(url, option, new AsyncHandler<String>() {
             private ByteArrayOutputStream bytes = new ByteArrayOutputStream();
             public void onThrowable(Throwable t) {
 

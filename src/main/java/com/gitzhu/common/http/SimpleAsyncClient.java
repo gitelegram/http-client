@@ -19,7 +19,7 @@ import java.util.concurrent.*;
  * @author michael
  * qiuxu.zhu@gmail.com
  */
-public class GeekAsyncClient {
+public class SimpleAsyncClient {
 
     private final Builder builder = new Builder();
 
@@ -38,7 +38,7 @@ public class GeekAsyncClient {
         }
     });
 
-    public GeekAsyncClient(){
+    public SimpleAsyncClient(){
 
         setCompressionEnforced(true);
 
