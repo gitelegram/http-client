@@ -1,6 +1,8 @@
 package com.gitzhu.common.http;
 
 
+import com.gitzhu.common.http.interceptor.Interceptors;
+import com.gitzhu.common.http.strategy.Strategies;
 import com.google.common.base.Supplier;
 import com.google.common.base.Suppliers;
 import org.apache.http.client.ResponseHandler;
@@ -31,6 +33,8 @@ public class SimpleClient {
 
     public SimpleClient(){
         setConnectionPool();
+        Interceptors.gzip(builder);
+        Strategies.keepAlive(builder, 5000);
     }
 
     public void setConnectionPool(){
