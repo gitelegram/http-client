@@ -55,7 +55,7 @@ public class SimpleAsyncClient {
         setRequestTimeout(60000);
 
         //UA
-        setUserAgent("Mozilla/5.0 (Windows NT 6.1; WOW64) Chrome/27.0.1453.94 Safari/537.36 qunarhc/8.0.1");
+        setUserAgent("Mozilla/5.0 (Windows NT 6.1; WOW64) Chrome/27.0.1453.94 Safari/537.36");
     }
 
     public void setCompressionEnforced(boolean compressionEnabled){
